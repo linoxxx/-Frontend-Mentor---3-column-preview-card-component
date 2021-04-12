@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+
+  --clr-orange: hsl(31, 77%, 52%);
+  --clr-cyan: hsl(184, 100%, 22%);
+  --dark-cyan: hsl(179, 100%, 13%);
+
+  /* ### Neutral */
+--white-for-paragraphs: hsla(0, 0%, 100%, 0.75);
+--gray-for-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+body {
+  font-size: 15px;
+  min-height: 100vh;
+  font-family: 'Lexend Deca', sans-serif;
+  color: var(--gray-for-background-headings-buttons);
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 3rem;
+
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+.padding-for-boxes{
+  padding: 5vh 18vw;
+}
+
+img, h1, p{
+  padding-bottom: 3vh;
+}
+
+.wrapper {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: var(--white-for-paragraphs);
+
+}
+
+.wrapper img{
+  width: 20vw;
+
+}
+
+.sedans p, .suvs p, .luxury p {
+  line-height: 2;
+  opacity: .8;
+
+}
+
+.sedans {
+  background-color: var(--clr-orange);
+  border-radius: 10px 10px 0 0;
+}
+
+.sedans button{
+  color: var(--clr-orange);
+
+}
+
+.suvs {
+  background-color: var(--clr-cyan);
+}
+
+.suvs button {
+  color: var(--clr-cyan);
+}
+
+.luxury {
+  background-color: var(--dark-cyan);
+  border-radius: 0 0 10px 10px;
+}
+
+.luxury button {
+  color: var(--dark-cyan);
+}
+
+button {
+  padding: 1.5vh 8vw;
+  border: 0;
+  margin-bottom: 1vh;
+  font-size: 3vw;
+  border-radius: 50px;
+  background-color: var(--gray-for-background-headings-buttons);
+}
+button:focus {
+  outline: none;
+}
+
+button:hover{
+  background-color: transparent;
+  border: 1px solid white;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 400px) {
+  .sedans p, .suvs p, .luxury p {
+    width: auto;
+    font-size: 3vw;
+  }
+
+  .wrapper{
+    margin: 15% 0%;
+
+  }
+
+  .sedans p, .suvs p, .luxury p {
+    width: 23ch;
+  }
+
+}
+
+@media (min-width:1440px) {
+  .wrapper{
+  flex-direction: row;
+  height: 100vh;
+
+
+  }
+
+  .padding-for-boxes{
+    padding: 5vh 3vw;
+  }
+
+  .wrapper img{
+    width: 5vw;
+
+  }
+
+  .sedans {
+    border-radius: 15px 0 0 15px;
+  }
+  .luxury {
+    border-radius: 0 15px 15px 0;
+  }
+
+
+  .sedans p, .suvs p, .luxury p {
+    font-size: .8vw;
+    width: 23ch;
+  }
+
+  .sedans, .suvs, .luxury  {
+
+  }
+
+  button {
+    font-size: 1vw;
+    padding: 1.5vh 2vw;
+  }
+
+
+}
